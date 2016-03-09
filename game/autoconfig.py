@@ -45,6 +45,7 @@ DEFAULT_SETTINGS = {
 SETTINGS = {
     'PIPELINE_COMPILERS': (
         'pipeline.compilers.sass.SASSCompiler',
+        'pipeline_requirejs.compilers.RequireCompiler',
     ),
     'PIPELINE_CSS': {
         'game-scss': {
@@ -55,6 +56,14 @@ SETTINGS = {
         },
     },
     'PIPELINE_CSS_COMPRESSOR': None,
+    'PIPELINE_JS': {
+        'game-requirejs': {
+            'source_filenames': (
+                'game/js/require/build.js',
+            ),
+            'output_filename': 'game/js/game_require.js',
+        },
+    },
     'INSTALLED_APPS': [
         'game',
         'pipeline',
