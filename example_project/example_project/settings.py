@@ -47,6 +47,8 @@ DATABASES = {
     }
 }
 
+EMAIL_BACKEND = 'django.core.mail.backends.console.EmailBackend'
+
 USE_I18N = True
 USE_L10N = True
 
@@ -65,6 +67,10 @@ INSTALLED_APPS = (
 )
 
 PIPELINE_ENABLED = False
+
+LOCALE_PATHS = [
+    os.path.join(os.path.dirname(__file__), '../../game/locale')
+]
 
 try:
     from example_project.local_settings import * # pylint: disable=E0611
