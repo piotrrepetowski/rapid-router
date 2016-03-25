@@ -35,6 +35,7 @@
 # program; modified versions of the program must be marked as such and not
 # identified as the original program.
 from django.utils.translation import ugettext
+from django.utils.translation import pgettext
 
 
 def youtubeLink(width, height, url, border):
@@ -181,7 +182,7 @@ def hint_level_default():
 
 
 def title_level1():
-    return ugettext("Can you help the van get to the house? ")
+    return pgettext('Context 2', "Can you help the van get to the house? ")
 
 
 def description_level1():
@@ -202,8 +203,13 @@ def hint_level1():
 
 
 def title_level2():
-    return ugettext("This time the house is further away. ")
+    return pgettext('Context', "This time the house is further away. ")
 
+def title_level2_ctx():
+    return pgettext('Context 2', "This time the house is further away. ")
+
+def title_level2_ctx3():
+    return pgettext('Context 3', "This time the house is further away. ")
 
 def description_level2():
     message = ugettext("A block can be placed next to or under another, like a jigsaw. A second "
