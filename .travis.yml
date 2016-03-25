@@ -57,7 +57,7 @@ after_success:
   - crowdin-cli-py -c ./crowdin.yaml download
   - cd game && django-admin compilemessages
   - pwd
-  - ls -l
+  - ls -l ./locale
 # FOR TEST ONLY
 # deploy:
 #   provider: pypi
