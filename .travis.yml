@@ -48,7 +48,7 @@ script:
 #   - coveralls
 git:
   depth: 9999999 # Building untagged builds needs enough depth to get the latest tag
-before_deploy:
+after_success:
   - mkdir -p game/locale/en-PT
   - cd game && django-admin makemessages -l en-PT
   - crowdin-cli-py -c ./crowdin.yaml upload sources
