@@ -181,28 +181,34 @@ def hint_level_default():
 
 
 def title_level1():
-    return ugettext("Can you help the van get to the house? ")
+    return ugettext("Can you help the van get to the house?")
+
+
+def go_button_icon():
+    return ("<img src='/static/game/image/actions/go.svg' class='go-button-icon' alt='%(go_button_label)s' "
+    + "title='%(go_button_label)s' />" % {'go_button_label': ugettext('Go')})
 
 
 def description_level1():
     message = ugettext("Choose the right blocks to tell the van where to go. <br> Drag the "
                        + "blocks under the <b>Start</b> block to attach them. <br> To remove a "
                        + "block, drag it into the bin in the bottom right of the screen. "
-                       + "<br> When you are happy with your sequence, press <b>Go</b>! ")
+                       + "<br> When you are happy with your sequence, press "
+                       + "%(go_button_icon)s!") % {'go_button_icon': go_button_icon()}
     return build_description(title_level1(), message)
 
 
 def hint_level1():
     message = ugettext("Drag the <b>Move forwards</b> block so that it is under the <b>Start</b> "
                        + "block - close enough to be touching. <br><br>"
-                       + "Clicking on the arrows next to the <b>Go</b> button will also drag the "
+                       + "Clicking on the arrows next to the %(go_button_icon)s button will also drag the "
                        + "blocks into a sequence for you. <br><br>"
-                       + "Don't forget to press <b>Go</b> when you are done. ")
+                       + "Don't forget to press %(go_button_icon)s when you are done.") % {'go_button_icon': go_button_icon()}
     return message
 
 
 def title_level2():
-    return ugettext("This time the house is further away. ")
+    return ugettext("This time the house is further away.")
 
 
 def description_level2():
@@ -210,20 +216,20 @@ def description_level2():
                        + "<b>Move forwards</b> block can be placed under the first <b>Move "
                        + "forwards</b> block. <br> To remove a block, drag it back to the "
                        + "left of the screen or drop it in the bin. <br> When you are happy with "
-                       + "your sequence, press <b>Go</b>! ")
+                       + "your sequence, press %(go_button_icon)s!") % {'go_button_icon': go_button_icon()}
     return build_description(title_level2(), message)
 
 
 def hint_level2():
     message = ugettext("A second <b>Move forwards</b> block can be placed under the first <b>Move "
                        + "forwards</b> block. <br><br>"
-                       + "The arrows next to the <b>Go</b> button will drag the blocks into a "
-                       + "sequence for you. ")
+                       + "The arrows next to the %(go_button_icon)s button will drag the blocks into a "
+                       + "sequence for you.") % {'go_button_icon': go_button_icon()}
     return message
 
 
 def title_level3():
-    return ugettext("Can you make the van turn right? ")
+    return ugettext("Can you make the van turn right?")
 
 
 def description_level3():
@@ -231,91 +237,96 @@ def description_level3():
                        + "the <b>Turn right</b> block in your sequence. <br> Drag the blocks "
                        + "and attach them under the <b>Start</b> block like before. To remove a "
                        + "block, drag it back to the left of the screen or drop it in the bin. "
-                       + "<br> When you are happy with your sequence, press <b>Go</b>! ")
+                       + "<br> When you are happy with your sequence, press %(go_button_icon)s!"
+              ) % {'go_button_icon': go_button_icon()}
     return build_description(title_level3(), message)
 
 
 def hint_level3():
     message = ugettext("A <b>Turn right</b> block can be placed under the first <b>Move "
-                       + "forwards</b> block. <br><br> The arrows next to the <b>Go</b> button "
-                       + "will drag the blocks into a sequence for you. ")
+                       + "forwards</b> block. <br><br> The arrows next to the %(go_button_icon)s button "
+                       + "will drag the blocks into a sequence for you.") % {'go_button_icon': go_button_icon()}
     return message
 
 
 def title_level4():
-    return ugettext("You are getting good at this! Let's try turning left. ")
+    return ugettext("You are getting good at this! Let's try turning left.")
 
 
 def description_level4():
     message = ugettext("This time the van has to go left. Make sure you use the <b>Turn left</b> "
                        + "block in your sequence. <br> Drag and attach the blocks like before. "
-                       + "<br> When you are happy with your sequence, press <b>Go</b>! ")
+                       + "<br> When you are happy with your sequence, press %(go_button_icon)s!"
+              ) % {'go_button_icon': go_button_icon()}
     return build_description(title_level4(), message)
 
 
 def hint_level4():
     message = ugettext("A <b>Turn left</b> block can be placed under a series of <b>Move "
-                       + "forwards</b> blocks. <br> The arrows next to the <b>Go</b> button will "
-                       + "drag the blocks into a sequence for you. ")
+                       + "forwards</b> blocks. <br> The arrows next to the %(go_button_icon)s button will "
+                       + "drag the blocks into a sequence for you.") % {'go_button_icon': go_button_icon()}
     return message
 
 
 def title_level5():
-    return ugettext("Good work! You are ready for something harder. ")
+    return ugettext("Good work! You are ready for something harder.")
 
 
 def description_level5():
     message = ugettext("You already know how to make the van turn left or right. This time "
                        + "the van has to make lots of turns to reach the house. <br> Drag and "
                        + "attach the blocks to make your sequence."
-                       + "<br> When you are happy with your sequence, press <b>Go</b>! ")
+                       + "<br> When you are happy with your sequence, press %(go_button_icon)s!"
+              ) % {'go_button_icon': go_button_icon()}
     return build_description(title_level5(), message)
 
 
 def hint_level5():
     message = ugettext("This road starts by curving to the <b>left</b>. Then it curves to the "
-                       + "<b>right</b>. <br><br> The arrows next to the <b>Go</b> button will drag "
-                       + "the blocks into a sequence for you. ")
+                       + "<b>right</b>. <br><br> The arrows next to the %(go_button_icon)s button will drag "
+                       + "the blocks into a sequence for you.") % {'go_button_icon': go_button_icon()}
     return message
 
 
 def title_level6():
-    return ugettext("Well done! Let's use all three blocks. ")
+    return ugettext("Well done! Let's use all three blocks.")
 
 
 def description_level6():
     message = ugettext("This time the van has to <b>Move forwards</b>, <b>Turn left</b> and "
                        + "<b>Turn right</b>. <br><br> Drag and attach the blocks like before. "
-                       + "<br> When you are happy with your sequence, press <b>Go</b>! ")
+                       + "<br> When you are happy with your sequence, press %(go_button_icon)s!"
+              ) % {'go_button_icon': go_button_icon()}
     return build_description(title_level6(), message)
 
 
 def hint_level6():
     message = ugettext("Follow the road around. How many <b>Move forwards</b> do you need? <br><br>"
-                       + "The arrows next to the <b>Go</b> button will drag the blocks into a "
-                       + "sequence for you. ")
+                       + "The arrows next to the %(go_button_icon)s button will drag the blocks into a "
+                       + "sequence for you.") % {'go_button_icon': go_button_icon()}
     return message
 
 
 def title_level7():
-    return ugettext("This road is more complicated. ")
+    return ugettext("This road is more complicated.")
 
 
 def description_level7():
     message = ugettext("Practise your new skills on this road by helping the driver to arrive at "
-                       + "the house. <br> When you are happy with your sequence, press <b>Go</b>! ")
+                       + "the house. <br> When you are happy with your sequence, press %(go_button_icon)s!"
+              ) % {'go_button_icon': go_button_icon()}
     return build_description(title_level7(), message)
 
 
 def hint_level7():
     message = ugettext("Follow the road around. Don't forget to <b>Turn left</b> first. <br><br>"
-                       + "The arrows next to the <b>Go</b> button will drag the blocks into a "
-                       + "sequence for you.")
+                       + "The arrows next to the %(go_button_icon)s button will drag the blocks into a "
+                       + "sequence for you.") % {'go_button_icon': go_button_icon()}
     return message
 
 
 def title_level8():
-    return ugettext("The warehouse is not always in the same place. ")
+    return ugettext("The warehouse is not always in the same place.")
 
 
 def description_level8():
@@ -323,41 +334,44 @@ def description_level8():
                        + "to use the <b>Move forwards</b> block. <br> Can you use the <b>Move "
                        + "forwards</b> block correctly even when it looks like the van goes in a "
                        + "different direction? "
-                       + "<br> When you are happy with your sequence, press <b>Go</b>! ")
+                       + "<br> When you are happy with your sequence, press %(go_button_icon)s!"
+              ) % {'go_button_icon': go_button_icon()}
     return build_description(title_level8(), message)
 
 
 def hint_level8():
     message = ugettext("On screen, the van looks like it follows the road down. If you were in the "
                        + "van, it would look like you should <b>Move forwards</b>, then <b>Turn "
-                       + "right</b>. ")
+                       + "right</b>.")
     return message
 
 
 def title_level9():
-    return ugettext("Can you go from right to left? ")
+    return ugettext("Can you go from right to left?")
 
 
 def description_level9():
     message = ugettext("Practise your new skills on this road by helping the driver to arrive "
                        + "at the house. "
-                       + "<br> When you are happy with your sequence, press <b>Go</b>! ")
+                       + "<br> When you are happy with your sequence, press %(go_button_icon)s!"
+              ) % {'go_button_icon': go_button_icon()}
     return build_description(title_level9(), message)
 
 
 def hint_level9():
     message = ugettext("How many times do you have to <b>Move forwards</b> before you "
-                       + "<b>Turn left</b>? ")
+                       + "<b>Turn left</b>?")
     return message
 
 
 def title_level10():
-    return ugettext("Well done! How about another go? ")
+    return ugettext("Well done! How about another go?")
 
 
 def description_level10():
     message = ugettext("You've done really well so far. Try to get the van to the house. "
-                       + "<br> When you are happy with your sequence, press <b>Go</b>! ")
+                       + "<br> When you are happy with your sequence, press %(go_button_icon)s!"
+              ) % {'go_button_icon': go_button_icon()}
     return build_description(title_level10(), message)
 
 
@@ -365,26 +379,27 @@ def hint_level10():
     message = ugettext("This map is not so hard. Notice that to you it looks like the road goes "
                        + "up, but if you were in the in the van, you would see the road goes "
                        + "right. <br><br> Do you know which turn the van will take next? <br><br> "
-                       + "The arrows next to the <b>Go</b> button will drag the blocks into a "
-                       + "sequence for you. ")
+                       + "The arrows next to the %(go_button_icon)s button will drag the blocks into a "
+                       + "sequence for you.") % {'go_button_icon': go_button_icon()}
     return message
 
 
 def title_level11():
-    return ugettext("Snail maze! ")
+    return ugettext("Snail maze!")
 
 
 def description_level11():
     message = ugettext("Uh oh, a tricky snail maze! Can you take the van through it? "
-                       + "<br> When you are happy with your sequence, press <b>Go</b>! ")
+                       + "<br> When you are happy with your sequence, press %(go_button_icon)s!"
+              ) % {'go_button_icon': go_button_icon()}
     return build_description(title_level11(), message)
 
 
 def hint_level11():
     message = ugettext("The maze looks a bit like a snail, doesn't it? That means that for most of "
                        + "the time the van should only <b>Move forwards</b> and <b>Turn right</b>. "
-                       + "<br><br> The arrows next to the <b>Go</b> button will drag the blocks "
-                       + "into a sequence for you. ")
+                       + "<br><br> The arrows next to the %(go_button_icon)s button will drag the blocks "
+                       + "into a sequence for you.") % {'go_button_icon': go_button_icon()}
     return message
 
 
@@ -395,14 +410,15 @@ def title_level12():
 def description_level12():
     message = ugettext("Good work, by now you are able to solve quite complicated levels. Prove "
                        + "your skills! "
-                       + "<br> When you are happy with your sequence, press <b>Go</b>! ")
+                       + "<br> When you are happy with your sequence, press %(go_button_icon)s!"
+              ) % {'go_button_icon': go_button_icon()}
     return build_description(title_level12(), message)
 
 
 def hint_level12():
     message = ugettext("This road might look much longer and more complicated, but it's not that "
                        + "hard. <br> Start by using <b>Move forwards</b> a few steps and <b>Move "
-                       + "left</b>. ")
+                       + "left</b>.")
     return message
 
 
@@ -413,14 +429,14 @@ def title_level13():
 def description_level13():
     message = ugettext("Often there is more than one way to get to the house. The route that needs "
                        + "the fewest directions is usually best. <br> Help the van find the "
-                       + "shortest route to the house. <br> You can press the <b>Go</b> or "
-                       + "<b>Play</b> buttons to start the van. ")
+                       + "shortest route to the house. <br> You can press the %(go_button_icon)s or "
+                       + "<b>Play</b> buttons to start the van.") % {'go_button_icon': go_button_icon()}
     return build_description(title_level13(), message)
 
 
 def hint_level13():
     message = ugettext("Try taking the route that starts by turning left then turns right. Do you "
-                       + "know what follows next? ")
+                       + "know what follows next?")
     return message
 
 

@@ -110,6 +110,11 @@ identified as the original program.
     margin-right: 20px;
 }
 
+.ocargo-modal .go-button-icon {
+    height: 50px;
+    width: 50px;
+}
+
 /************/
 /** Tables **/
 /************/
@@ -347,4 +352,9 @@ table th {
 
 #myModal pre {
     margin: 1em 2em 0.3em;
+}
+
+.icon {
+    height: 50px;
+    width: 50px;
 }
