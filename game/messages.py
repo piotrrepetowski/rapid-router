@@ -43,6 +43,10 @@ def youtubeLink(width, height, url, border):
            + "' allowfullscreen class='video'></iframe><br>"
 
 
+def playButtonLink():
+    return '<img src="/static/game/image/actions/go.svg" style="width: 5%;">'
+
+
 def noPermissionMessage():
     return ugettext("You have no permission to see this.")
 
@@ -188,16 +192,17 @@ def description_level1():
     message = ugettext("Choose the right blocks to tell the van where to go. <br> Drag the "
                        + "blocks under the <b>Start</b> block to attach them. <br> To remove a "
                        + "block, drag it into the bin in the bottom right of the screen. "
-                       + "<br> When you are happy with your sequence, press <b>Go</b>! ")
+                       + "<br> When you are happy with your sequence, press %(play_button)s! ")\
+              % {'play_button': playButtonLink()}
     return build_description(title_level1(), message)
 
 
 def hint_level1():
     message = ugettext("Drag the <b>Move forwards</b> block so that it is under the <b>Start</b> "
                        + "block - close enough to be touching. <br><br>"
-                       + "Clicking on the arrows next to the <b>Go</b> button will also drag the "
+                       + "Clicking on the arrows next to the %(play_button)s button will also drag the "
                        + "blocks into a sequence for you. <br><br>"
-                       + "Don't forget to press <b>Go</b> when you are done. ")
+                       + "Don't forget to press %(play_button)s when you are done. ") % {'play_button': playButtonLink()}
     return message
 
 
